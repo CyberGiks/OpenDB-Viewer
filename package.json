@@ -1,0 +1,36 @@
+{
+  "name": "opendb-viewer",
+  "version": "1.0.0",
+  "description": "Open source graphical database management and development software",
+  "main": "src/dist/index.js",
+  "scripts": {
+    "start": "ts-node ./src/index.ts",
+    "watch": "nodemon --exec \"npm run start\"",
+    "watch:debug": "nodemon --exec \"node --inspect-brk --no-lazy -r ts-node/register ./src/index.ts\"",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CyberGiks/OpenDB-Viewer.git"
+  },
+  "keywords": [
+    "db",
+    "opendb"
+  ],
+  "author": "cyberGiks",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CyberGiks/OpenDB-Viewer/issues"
+  },
+  "homepage": "https://github.com/CyberGiks/OpenDB-Viewer#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.1",
+    "nodemon": "^1.18.11",
+    "ts-node": "^8.1.0",
+    "typescript": "^3.4.4"
+  }
+}
