@@ -10,7 +10,7 @@
             "request": "launch",
             "env": {},
             "args": [
-                "${workspaceFolder}/src/index.ts"
+                "${workspaceFolder}/src/main/index.ts"
             ],
             "runtimeArgs": [
                 "--nolazy",

@@ -4,10 +4,11 @@
   "description": "Open source graphical database management and development software",
   "main": "src/dist/index.js",
   "scripts": {
-    "start": "ts-node ./src/index.ts",
+    "start": "ts-node ./src/main/index.ts",
     "watch": "nodemon --exec \"npm run start\"",
-    "watch:debug": "nodemon --exec \"node --inspect-brk --no-lazy -r ts-node/register ./src/index.ts\"",
-    "build": "tsc"
+    "watch:debug": "nodemon --exec \"node --inspect-brk --no-lazy -r ts-node/register ./src/main/index.ts\"",
+    "build": "tsc",
+    "final": "electron ./src/dist/index.js"
   },
   "repository": {
     "type": "git",
@@ -28,6 +29,7 @@
     "express": "^4.16.4"
   },
   "devDependencies": {
+    "@types/electron": "^1.6.10",
     "@types/express": "^4.16.1",
     "nodemon": "^1.18.11",
     "ts-node": "^8.1.0",

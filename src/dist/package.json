@@ -1,0 +1,14 @@
+{
+  "name": "opendb-viewer-final",
+  "version": "1.0.0",
+  "description": "Open source graphical database management and development software",
+  "main": "index.js",
+  "scripts": {},
+  "author": "cyberGiks",
+  "license": "MIT",
+  "homepage": "https://github.com/CyberGiks/OpenDB-Viewer#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4"
+  }
+}
