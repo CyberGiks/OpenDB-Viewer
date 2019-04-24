@@ -8,5 +8,6 @@
         "**/.DS_Store": true,
         "**/node_modules": true,
         // "**/src/dist/package.json": true,
-    }
+    },
+    "workbench.tree.indent": 15
 }

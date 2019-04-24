@@ -7,10 +7,15 @@ import { app, BrowserWindow } from 'electron';
 // debug only allowed for browserMode for now
 const browserMode = true;
 
-
+//#region Initializing variables
 let server: http.Server;
 let mainWindow: BrowserWindow;
 const exp = express();
+exp.set('view engine', 'pug');
+exp.set('views', path.join(__dirname, 'views'))
+//#endregion
+
+//#region BrowserMode Switch
 
 if (!browserMode) {
     app.on('ready', () => {
@@ -32,11 +37,16 @@ if (!browserMode) {
     console.log('Server running on port : ' + InitializeApp());
 }
 
+//#endregion
+
+/**
+ * Initializes the server & returns the associated port
+ */
 function InitializeApp(): number {
     exp.use(express.static(path.join(__dirname, 'views', 'assets')))
 
     exp.get('', (req, res, next) => {
-        res.sendFile(path.join(__dirname, 'views', 'index.html'));
+        res.render('index');
     });
 
     const initialPort = 3010;
